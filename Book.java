@@ -2,7 +2,7 @@
 package application;
 
 public class Book {
-	protected Int ISBN;
+	protected Int isbn;
 	protected String title;
 	protected String author;
 	protected String condition;
@@ -12,13 +12,17 @@ public class Book {
     protected User buyer;
 	protected Int quantity;
     protected Boolean sold;
-    
-	public UBook(String nameInput, String accountInput, String emailInput, String passInput, String joinInput) {
-		this.accountType = accountInput;
-		this.name = nameInput;
-		this.email = emailInput;
-		this.password = passInput;
-		this.joinDate = joinInput;
+
+	public Book(Int isbn, String title, String author, String condition, Double originalPrice, Double generatedPrice, User Seller, User buyer, Int quantity, Boolean sold) {
+            this.isbn = isbn;
+            this.title = title;
+            this.author = author;
+            this.condition = condition;
+            this.originalPrice = originalPrice;
+            this.generatedPrice = generatedPrice;
+            this.seller = seller;
+            this.buyer = buyer;
+            this.sold = sold;
 }
 	
 	public Book() {}
