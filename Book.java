@@ -10,7 +10,6 @@ public class Book {
     protected Double generatedPrice;
     protected User seller;
     protected User buyer;
-	protected Int quantity;
     protected Boolean sold;
 
 	public Book(Int isbn, String title, String author, String condition, Double originalPrice, Double generatedPrice, User Seller, User buyer, Int quantity, Boolean sold) {
