@@ -1,3 +1,5 @@
+//Main Class program for the file
+//Add all functions of each page here
 package application;
 	
 import javafx.application.Application;
