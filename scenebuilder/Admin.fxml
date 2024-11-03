@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8C1D40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="72.0" fitWidth="82.0">
+         <image>
+            <Image url="@ASU.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="78.0" layoutY="14.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: FFC627;" text="Statistics" />
+      <Button layoutX="185.0" layoutY="14.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="141.0" style="-fx-background-color: FFC627;" text="Buyer/Seller Records" />
+      <Button layoutX="336.0" layoutY="14.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: FFC627;" text="User Accounts" />
+      <Button layoutX="470.0" layoutY="14.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: FFC627;" text="Log Out" />
+      <StackPane layoutY="68.0" prefHeight="331.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="27.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Text fill="WHITE" layoutX="65.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" wrappingWidth="32.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="used like new" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="155.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" layoutX="283.0" layoutY="14.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="27.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="125.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="164.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="293.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="423.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="141.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="27.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="27.0" layoutY="244.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="155.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="59.0" layoutX="155.0" layoutY="244.0" stroke="BLACK" strokeType="INSIDE" width="128.0" />
+                  <Text fill="WHITE" layoutX="193.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" wrappingWidth="32.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="164.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="moderately used" />
+                  <Text fill="WHITE" layoutX="304.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="heavily used" />
+                  <Text fill="WHITE" layoutX="321.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" wrappingWidth="32.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="80.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="19.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="30.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="natural science books" />
+                  <Text fill="WHITE" layoutX="174.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="computer books" />
+                  <Text fill="WHITE" layoutX="208.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="19.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="316.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="math books" />
+                  <Text fill="WHITE" layoutX="338.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="19.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="429.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="english language books" />
+                  <Text fill="WHITE" layoutX="484.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" wrappingWidth="19.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="32.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="number of buyers" />
+                  <Text fill="WHITE" layoutX="72.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" wrappingWidth="19.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="162.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="number of sellers" />
+                  <Text fill="WHITE" layoutX="195.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14" wrappingWidth="32.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="number sold" />
+                  <Text fill="WHITE" layoutX="66.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" wrappingWidth="32.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="158.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="number on the market" />
+                  <Text fill="WHITE" layoutX="205.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18" wrappingWidth="32.6474609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Line endX="441.5" startX="-100.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="141.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" />
+                  <Text fill="WHITE" layoutX="282.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of transaction" />
+                  <Text fill="WHITE" layoutX="393.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buyer Name" />
+                  <Text fill="WHITE" layoutX="471.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller Name" />
+                  <Line endX="431.5" layoutX="135.0" layoutY="52.0" startX="-100.0" stroke="WHITE" />
+                  <ScrollPane layoutX="35.0" layoutY="53.0" prefHeight="273.0" prefWidth="533.0" style="-fx-background-color: #8C1D40;">
+                     <content>
+                        <HBox prefHeight="99.0" prefWidth="531.0">
+                           <children>
+                              <ImageView fitHeight="121.0" fitWidth="99.0">
+                                 <image>
+                                    <Image url="@Screenshot%202024-11-02%20at%2010.30.01%E2%80%AFPM.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Software Engineering - 10th Edition" wrappingWidth="91.0927734375">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category: Computer Books" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Condition: Like New" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author: Ian Sommerville" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Published Year: 2016" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN: 9780133943238" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Original Price: $110.25" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Decided Price: $110.25" />
+                                 </children>
+                              </VBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="09/02/2024" wrappingWidth="114.86572265625">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jane Doe" wrappingWidth="76.517578125">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mehek Khandelwal" wrappingWidth="103.28271484375">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="29.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" />
+                  <Line endX="445.5" layoutX="130.0" layoutY="40.0" startX="-100.0" stroke="WHITE" />
+                  <Text fill="WHITE" layoutX="30.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Image" />
+                  <Text fill="WHITE" layoutX="30.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" />
+                  <ImageView fitHeight="105.0" fitWidth="82.0" layoutX="105.0" layoutY="53.0">
+                     <image>
+                        <Image url="@Screenshot%202024-11-02%20at%2010.30.01%E2%80%AFPM.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="105.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Software Engineering - 10th edition" wrappingWidth="128.0512695312501" />
+                  <Text fill="WHITE" layoutX="30.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category" />
+                  <Text fill="WHITE" layoutX="105.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Books" />
+                  <Text fill="WHITE" layoutX="31.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition" />
+                  <Text fill="WHITE" layoutX="105.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Like New" />
+                  <Text fill="WHITE" layoutX="31.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+                  <Text fill="WHITE" layoutX="104.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Sommerville" />
+                  <Text fill="WHITE" layoutX="310.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year Published" />
+                  <Text fill="WHITE" layoutX="451.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2016" />
+                  <Text fill="WHITE" layoutX="310.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+                  <Text fill="WHITE" layoutX="453.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9780133943238" />
+                  <Text fill="WHITE" layoutX="311.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Original Price" />
+                  <Text fill="WHITE" layoutX="454.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$110.25" />
+                  <Text fill="WHITE" layoutX="309.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decided Price" />
+                  <Text fill="WHITE" layoutX="456.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$55.05" />
+                  <Text fill="WHITE" layoutX="309.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Transaction" />
+                  <Text fill="WHITE" layoutX="456.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09/02/2024" />
+                  <Text fill="WHITE" layoutX="309.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buyer Name" />
+                  <Text fill="WHITE" layoutX="454.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jane Doe" />
+                  <Text fill="WHITE" layoutX="308.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller Name" />
+                  <Text fill="WHITE" layoutX="457.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mehek Khandelwal" />
+                  <Button layoutX="233.0" layoutY="276.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: FFC627;" text="Save Changes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="63.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+                  <Text fill="WHITE" layoutX="163.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Text fill="WHITE" layoutX="274.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date User Joined" />
+                  <Text fill="WHITE" layoutX="397.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role" />
+                  <Text fill="WHITE" layoutX="163.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mehek Khandelwal" />
+                  <Text fill="WHITE" layoutX="287.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09/01/2024" />
+                  <Text fill="WHITE" layoutX="415.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buyer/Seller/Admin" />
+                  <Line endX="366.5" layoutX="163.0" layoutY="61.0" startX="-100.0" stroke="WHITE" />
+                  <ScrollPane layoutX="63.0" layoutY="66.0" prefHeight="247.0" prefWidth="468.0">
+                     <content>
+                        <HBox prefHeight="22.0" prefWidth="461.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1214675007" wrappingWidth="97.35693359375" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mehek Khandelwal" wrappingWidth="119.35693359375" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="09/01/2024" wrappingWidth="119.35693359375" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buyer/Seller/Admin" wrappingWidth="119.35693359375" />
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="36.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" />
+                  <Line endX="431.5" layoutX="137.0" layoutY="57.0" startX="-100.0" stroke="WHITE" />
+                  <Text fill="#9e9e9e" layoutX="37.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+                  <Text fill="#9e9e9e" layoutX="164.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1214675007" />
+                  <Text fill="WHITE" layoutX="37.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Text fill="WHITE" layoutX="164.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mehek Khandelwal" />
+                  <Text fill="WHITE" layoutX="36.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Joined" />
+                  <Text fill="WHITE" layoutX="165.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09/01/2024" />
+                  <Text fill="WHITE" layoutX="36.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                  <Text fill="WHITE" layoutX="164.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SunDevil123" />
+                  <Text fill="WHITE" layoutX="36.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role" />
+                  <Text fill="WHITE" layoutX="164.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buyer/Seller/Admin" />
+                  <Text fill="WHITE" layoutX="324.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions" />
+                  <ScrollPane layoutX="324.0" layoutY="109.0" prefHeight="121.0" prefWidth="241.0">
+                     <content>
+                        <HBox prefHeight="51.0" prefWidth="241.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Software Engineering - 10th Edition" wrappingWidth="83.8515625" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sold" wrappingWidth="65.8515625" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="09/02/2024" wrappingWidth="79.8515625" />
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+                  <Button layoutX="253.0" layoutY="257.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: FFC627;" text="Save Changes" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</Pane>
