@@ -25,6 +25,39 @@ public class Book {
             this.buyer = buyer;
             this.sold = sold;
 }
+    //Setter functions to be able to change each attribute of a book
+    public void setID(Int newID){
+        this.ID = newID;
+    }
+    public void setIsbn(Int newISBN){
+        this.isbn = newISBN;
+    }
+    public void setTitle(String newTitle){
+        this.title = newTitle;
+    }
+    public void setAuthor(String newAuthor){
+        this.author = newAuthor;
+    }
+    public void setCondition(String newCondition){
+        this.condition = newCondition;
+    }
+    public void setOriginalPrice(Double newOriginalPrice){
+        this.originalPrice = newOriginalPrice;
+    }
+    public void setGeneratedPrice(Double newGeneratedPrice){
+        this.generatedPrice = newGeneratedPrice;
+    }
+    public void setSeller(User newSeller){
+        this.seller = newSeller;
+    }
+    public void setBuyer(User newBuyer){
+        this.buyer = newBuyer;
+    }
+    public void setSold(Boolean newSoldStatus){
+        this.sold = newSoldStatus;
+    }
+
+    //Getter functions for each attribute of a book
     public Int getId() {
         return ID;
     }
