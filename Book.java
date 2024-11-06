@@ -2,6 +2,7 @@
 package application;
 
 public class Book {
+    protected Int ID;
 	protected Int isbn;
 	protected String title;
 	protected String author;
@@ -12,7 +13,8 @@ public class Book {
     protected User buyer;
     protected Boolean sold;
 
-	public Book(Int isbn, String title, String author, String condition, Double originalPrice, Double generatedPrice, User Seller, User buyer, Int quantity, Boolean sold) {
+	public Book(Int ID, Int isbn, String title, String author, String condition, Double originalPrice, Double generatedPrice, User Seller, User buyer, Int quantity, Boolean sold) {
+            this.ID = ID;
             this.isbn = isbn;
             this.title = title;
             this.author = author;
@@ -23,6 +25,39 @@ public class Book {
             this.buyer = buyer;
             this.sold = sold;
 }
-	
-	public Book() {}
+    public Int getId() {
+        return ID;
+    }
+    public Int getIsbn(){
+        return isbn;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public String getAuthor(){
+        return author;
+    }
+    public String getCondition(){
+        return condition;
+    }
+    public Double getOriginalPrice(){
+        return originalPrice;
+    }
+    public Double getGeneratedPrice(){
+        return generatedPrice;
+    }
+    public User getSeller(){
+        return seller;
+    }
+    public User getBuyer(){
+        if(seller !== null){
+            return buyer;
+        }else{
+            return null;
+        }
+    }
+    public Boolean isSold(){
+        return sold;
+    }
+
 }
