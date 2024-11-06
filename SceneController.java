@@ -1,3 +1,5 @@
+//Class for handing all of the programs screen changes
+//Call this to for User Interface Changes
 package application;
 
 import java.util.HashMap;
