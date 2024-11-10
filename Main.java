@@ -13,20 +13,19 @@ public class Main extends Application {
 	public User thisUser = new User();
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Controller controller = new Controller();
 		FXMLLoader loader = new FXMLLoader();
-		loader.setController(controller);
 		AnchorPane root = new AnchorPane();
 		Scene scene = new Scene(root);
 		SceneController sceneController = new SceneController(scene);
 		sceneController.addScene("login", FXMLLoader.load(getClass().getClassLoader().getResource("Login.fxml")));
 		sceneController.addScene("seller", FXMLLoader.load(getClass().getClassLoader().getResource("Seller.fxml")));
 		sceneController.addScene("buyer", FXMLLoader.load(getClass().getClassLoader().getResource("Buyer.fxml")));
-		//sceneController.addScene("purchase", FXMLLoader.load(getClass().getClassLoader().getResource("Purchase.fxml")));
-		//sceneController.addScene("admin", FXMLLoader.load(getClass().getClassLoader().getResource("Admin.fxml")));
+		sceneController.addScene("purchase", FXMLLoader.load(getClass().getClassLoader().getResource("Purchase.fxml")));
+		sceneController.addScene("admin", FXMLLoader.load(getClass().getClassLoader().getResource("Admin.fxml")));
 
 		if(thisUser.accountType == "") {
-			//root = FXMLLoader.<AnchorPane>load(getClass().getResource("/Login.fxml"));
+			LoginController controller = new LoginController();
+			loader.setController(controller);
 			sceneController.activate("login");
 
 			primaryStage.setScene(scene);
@@ -47,6 +46,8 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} else if (thisUser.accountType.toLowerCase().contains("admin")) {
+			AdminController adminController = new AdminController();
+			loader.setController(adminController);
 			sceneController.activate("admin");
 			
 			primaryStage.setScene(scene);
