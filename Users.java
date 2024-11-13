@@ -32,6 +32,10 @@ public class Users {
 		this.numUsers = num;
 	}
 	
+	public Integer getNumUsers() {
+		return this.numUsers;
+	}
+	
 	public void uploadUsers() throws FileNotFoundException {
 		try(Scanner scan = new Scanner(new File(fileName))) {
 			scan.nextLine();
@@ -189,6 +193,10 @@ public class Users {
 		for(int i = 0; i < users.size(); i++) {
 			System.out.println(users.get(i).name);
 		}
+	}
+	
+	public User getUser(Integer i) {
+		return users.get(i);
 	}
 
 }
