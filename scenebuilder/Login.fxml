@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="anchorPane" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="anchorPane" stylesheets="@loginStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
       <GridPane prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -30,7 +30,7 @@
          <children>
             <VBox id="vBoxLogo" alignment="CENTER" minHeight="400.0" minWidth="200.0" styleClass="vBox" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                <children>
-                  <Label id="welcomeLabel" text="Welcome Back to ASU Books, Sun Devil!" textAlignment="CENTER" wrapText="true">
+                  <Label id="welcomeLabel" text="Welcome Back to ASU Books, Sun Devil!" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>
@@ -54,19 +54,19 @@
             <VBox id="vBoxLogin" alignment="CENTER_LEFT" minHeight="400.0" minWidth="200.0" spacing="5.0" styleClass="vBox" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                <children>
                   <Label styleClass="loginLabels" text="ASU E-Mail" />
-                  <TextField minHeight="30.0" promptText="Please enter your e-mail" />
+                  <TextField id="emailField" fx:id="emailField" minHeight="30.0" promptText="Please enter your e-mail" styleClass="loginFields" />
                   <Label styleClass="loginLabels" text="Password">
                      <padding>
-                        <Insets top="10.0" />
+                        <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <PasswordField minHeight="30.0" promptText="Please enter your password" />
+                  <PasswordField id="passField" fx:id="passField" minHeight="30.0" promptText="Please enter your password" styleClass="loginFields" />
                   <VBox alignment="CENTER" spacing="5.0">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                      <children>
-                        <Button id="loginButton" alignment="CENTER" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" text="Sign In" textAlignment="CENTER" textOverrun="CLIP">
+                        <Button id="loginButton" fx:id="loginButton" alignment="CENTER" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#loginTime" text="Sign In" textAlignment="CENTER" textOverrun="CLIP">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
@@ -90,4 +90,4 @@
          </children>
       </GridPane>
    </children>
-</fx:root>
+</AnchorPane>
