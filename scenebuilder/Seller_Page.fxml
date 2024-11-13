@@ -15,8 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8C1D40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8C1D40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SellerController">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -30,7 +29,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: FFC627; -fx-border-radius: 20; -fx-background-radius: 25; -fx-border-color: #000000; -fx-border-width: 2; -fx-translate-x: 225; -fx-translate-y: 30;" text="List Book" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: FFC627; -fx-border-radius: 20; -fx-background-radius: 25; -fx-border-color: #000000; -fx-border-width: 2; -fx-translate-x: 225; -fx-translate-y: 30;" text="Log Out" textAlignment="CENTER">
                <font>
                   <Font size="24.0" />
                </font>
@@ -58,7 +57,7 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <TextField promptText="Enter Title" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
+                  <TextField fx:id="titleBox" promptText="Enter Title" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -72,7 +71,7 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <TextField promptText="Enter Value" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
+                  <TextField fx:id="isbnBox" promptText="Enter Value" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -86,7 +85,7 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <TextField promptText="Enter Author" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
+                  <TextField fx:id="authorBox" promptText="Enter Author" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -100,7 +99,7 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <ComboBox prefWidth="150.0" promptText="Select Current Condition" style="-fx-translate-x: 10; -fx-translate-y: 10; -fx-max-width: 250; -fx-pref-height: 35; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20; -fx-background-color: FFFFFF;" visibleRowCount="5">
+                  <ComboBox fx:id="conditionBox" prefWidth="150.0" promptText="Select Current Condition" style="-fx-translate-x: 10; -fx-translate-y: 10; -fx-max-width: 250; -fx-pref-height: 35; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20; -fx-background-color: FFFFFF;" visibleRowCount="5">
                      <effect>
                         <Glow />
                      </effect>
@@ -114,7 +113,7 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <ComboBox prefWidth="150.0" promptText="Select Category Of The Book" style="-fx-translate-x: 10; -fx-translate-y: 10; -fx-max-width: 250; -fx-pref-height: 35; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20; -fx-background-color: FFFFFF;" visibleRowCount="5">
+                  <ComboBox fx:id="categoryBox" prefWidth="150.0" promptText="Select Category Of The Book" style="-fx-translate-x: 10; -fx-translate-y: 10; -fx-max-width: 250; -fx-pref-height: 35; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20; -fx-background-color: FFFFFF;" visibleRowCount="5">
                      <effect>
                         <Glow />
                      </effect>
@@ -128,14 +127,14 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <TextField promptText="Enter Original Price Of Book" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
+                  <TextField fx:id="originalPriceBox" promptText="Enter Original Price Of Book" style="-fx-translate-y: 10; -fx-translate-x: 10; -fx-max-width: 250; -fx-pref-height: 30; -fx-border-color: FFC627; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
                </children>
             </VBox>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: FFC627; -fx-border-radius: 20; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-width: 2; -fx-translate-x: 115; -fx-translate-y: 5; -fx-pref-height: 40;" text="List My Book" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="listMyBook" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#listMyBookButton" style="-fx-background-color: FFC627; -fx-border-radius: 20; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-width: 2; -fx-translate-x: 115; -fx-translate-y: 5; -fx-pref-height: 40;" text="List My Book" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
