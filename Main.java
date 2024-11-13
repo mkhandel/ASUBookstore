@@ -31,6 +31,8 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} else if (thisUser.accountType.toLowerCase().contains("seller")) {
+			SellerController sellerController = new SellerController();
+			loader.setController(sellerController);
 			sceneController.activate("seller");
 			
 			primaryStage.setScene(scene);
