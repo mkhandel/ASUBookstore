@@ -1,27 +1,29 @@
 package application;
 
+
 import java.util.HashMap;
 
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-public class SceneController {
-    private HashMap<String, Pane> screenMap = new HashMap<>();
+public class SceneController extends AnchorPane{
+    private HashMap<String, Pane> sceneMap = new HashMap<>();
     private Scene main;
 
     public SceneController(Scene main) {
         this.main = main;
     }
 
-    protected void addScreen(String name, Pane pane){
-         screenMap.put(name, pane);
+    protected void addScene(String name, Pane pane){
+         sceneMap.put(name, pane);
     }
 
-    protected void removeScreen(String name){
-        screenMap.remove(name);
+    protected void removeScene(String name){
+        sceneMap.remove(name);
     }
 
     protected void activate(String name){
-        main.setRoot( screenMap.get(name) );
+        main.setRoot(sceneMap.get(name));
     }
 }

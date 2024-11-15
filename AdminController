@@ -1,0 +1,174 @@
+package application;
+
+import java.io.FileNotFoundException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+
+public class AdminController extends Pane{
+
+    @FXML // ResourceBundle that was given to the FXMLLoader
+    private ResourceBundle resources;
+
+    @FXML // URL location of the FXML file that was given to the FXMLLoader
+    private URL location;
+    
+    // Admin
+    @FXML
+    private Pane mainPane;
+    
+    @FXML
+    private Pane statisticsPane;
+    
+    @FXML
+    private Pane recordsPane;
+    
+    @FXML
+    private Pane accountsPane;
+    
+    @FXML
+    private Pane editBook;
+    
+    @FXML
+    private Pane editUser;
+    
+    @FXML
+    private VBox usersVBox;
+    
+    @FXML
+    private VBox usersEmail;
+    
+    @FXML
+    private VBox usersName;
+    
+    @FXML
+    private VBox usersDate;
+    
+    @FXML
+    private VBox usersRole;
+    
+    // Logout functions
+
+    @FXML
+    private void logoutTime(MouseEvent event) throws Exception {
+    	Node node = (Node)event.getSource();
+    	Stage stage = (Stage)node.getScene().getWindow();
+    	
+    	Main main = new Main();
+    	User noUser = new User();
+    	main.thisUser = noUser;
+    	main.start(stage);
+    	
+    }
+    
+    // Admin functions
+    
+    @FXML
+    private void switchToStats(MouseEvent event) {
+    	if(recordsPane.isVisible() == true) {
+    		recordsPane.setVisible(false);
+    	}
+    	
+    	if(accountsPane.isVisible() == true) {
+    		accountsPane.setVisible(false);
+    	}
+    	
+    	
+    	if(editBook.isVisible() == true) {
+    		editBook.setVisible(false);
+    	}
+    	
+    	
+    	if(editUser.isVisible() == true) {
+    		editUser.setVisible(false);
+    	}
+    	
+    	statisticsPane.setVisible(true);
+    }
+    
+    @FXML
+    private void switchToRecords(MouseEvent event) {
+    	if(statisticsPane.isVisible() == true) {
+    		statisticsPane.setVisible(false);
+    	}
+    	
+    	
+    	if(accountsPane.isVisible() == true) {
+    		accountsPane.setVisible(false);
+    	}
+    	
+    	
+    	if(editBook.isVisible() == true) {
+    		editBook.setVisible(false);
+    	}
+    	
+    	
+    	if(editUser.isVisible() == true) {
+    		editUser.setVisible(false);
+    	}
+    	
+    	recordsPane.setVisible(true);
+    }
+    
+    @FXML
+    private void switchToAccounts(MouseEvent event) {
+    	if(recordsPane.isVisible() == true) {
+    		recordsPane.setVisible(false);
+    	}
+    	
+    	
+    	if(statisticsPane.isVisible() == true) {
+    		statisticsPane.setVisible(false);
+    	}
+    	
+    	
+    	if(editBook.isVisible() == true) {
+    		editBook.setVisible(false);
+    	}
+    	
+    	
+    	if(editUser.isVisible() == true) {
+    		editUser.setVisible(false);
+    	}
+    	
+    	accountsPane.setVisible(true);
+    }
+    
+    private void loadInformation() {
+    	Users allUsers = new Users();
+    	try {
+			allUsers.uploadUsers();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	Integer numU = allUsers.getNumUsers();
+    	
+    	for(int i = 0; i<numU; i++) {
+    		Text showEmail = new Text(allUsers.getUser(i).email);
+    		Text showName = new Text(allUsers.getUser(i).name);
+    		Text showDate = new Text(allUsers.getUser(i).joinDate);
+    		Text showRole = new Text(allUsers.getUser(i).accountType);
+    		
+    		usersEmail.getChildren().add(showEmail);
+    		usersName.getChildren().add(showName);
+    		usersDate.getChildren().add(showDate);
+    		usersRole.getChildren().add(showRole);
+    		}
+    }
+
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+    	loadInformation();
+    }
+
+}
