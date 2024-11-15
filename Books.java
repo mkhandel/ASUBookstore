@@ -100,6 +100,11 @@ public class Books {
         return noFoundBook;
     }
 
+    //returns arraylist of books
+    public ArrayList<Book> getBooks(){
+        return books;
+    }
+
     public void addBook(String isbn, String title, String author, String condition,
             String category, Double originalPrice, Double generatedPrice,
             String seller, String buyer, boolean sold) {

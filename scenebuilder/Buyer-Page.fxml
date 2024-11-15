@@ -7,33 +7,21 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="416.0" prefWidth="616.0" style="-fx-background-color: #8c1d40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.buyerpage.buyerPage">
+<AnchorPane prefHeight="416.0" prefWidth="616.0" style="-fx-background-color: #8c1d40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuyerPageController">
    <children>
-      <Button layoutX="475.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="76.0" style="-fx-background-color: #ffc627;" text="Log Out" />
-      <Button layoutX="165.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #ffc627;" text="Checkout" />
+      <Button layoutX="475.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutTime" prefHeight="50.0" prefWidth="76.0" style="-fx-background-color: #ffc627;" text="Log Out" />
+      <Button layoutX="165.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCheckout" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #ffc627;" text="Checkout" />
       <Button layoutX="95.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #ffc627;" text="Books for Sale" textAlignment="CENTER" wrapText="true" />
-      <ComboBox layoutX="36.0" layoutY="80.0" prefHeight="25.0" prefWidth="94.0" promptText="category" />
-      <ComboBox layoutX="142.0" layoutY="80.0" prefHeight="25.0" prefWidth="102.0" promptText="Condition" />
-      <Button layoutX="478.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="add to cart" />
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="5.0" layoutY="116.0" prefHeight="297.0" prefWidth="608.0" vbarPolicy="ALWAYS">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="596.0" style="-fx-background-color: #9E5A70;">
-               <children>
-                  <CheckBox layoutX="81.0" layoutY="51.0" mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox layoutX="483.0" layoutY="174.0" mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox layoutX="282.0" layoutY="174.0" mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox layoutX="81.0" layoutY="174.0" mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox layoutX="483.0" layoutY="50.0" mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox layoutX="282.0" layoutY="51.0" mnemonicParsing="false" text="CheckBox" />
-                  <TextArea layoutX="40.0" layoutY="73.0" prefHeight="60.0" prefWidth="114.0" text="image and text are placeholders" wrapText="true" />
-                  <TextArea layoutX="241.0" layoutY="73.0" prefHeight="60.0" prefWidth="114.0" />
-                  <TextArea layoutX="442.0" layoutY="73.0" prefHeight="60.0" prefWidth="114.0" />
-                  <TextArea layoutX="442.0" layoutY="195.0" prefHeight="60.0" prefWidth="114.0" />
-                  <TextArea layoutX="241.0" layoutY="195.0" prefHeight="60.0" prefWidth="114.0" />
-                  <TextArea layoutX="40.0" layoutY="195.0" prefHeight="60.0" prefWidth="114.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
+      <ComboBox fx:id="categoryBox" layoutX="36.0" layoutY="80.0" onAction="#setBooksByCategory" prefHeight="25.0" prefWidth="139.0" promptText="category" />
+      <ComboBox fx:id="conditionBox" layoutX="241.0" layoutY="80.0" onAction="#setBooksByCondition" prefHeight="25.0" prefWidth="149.0" promptText="Condition" />
+      <Button fx:id="cart" layoutX="478.0" layoutY="80.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="25.0" prefWidth="76.0" text="add to cart" />
+       <TableView fx:id="bookTable" layoutX="13.0" layoutY="119.0" prefHeight="277.0" prefWidth="581.0">
+           <columns>
+               <TableColumn fx:id="bookTitle" prefWidth="168.0" text="Title" />
+               <TableColumn fx:id="bookAuthor" minWidth="0.0" prefWidth="96.0" text="Author" />
+               <TableColumn fx:id="bookISBN" prefWidth="118.0" text="ISBN" />
+               <TableColumn fx:id="bookPrice" prefWidth="98.0" sortable="false" text="Price" />
+               <TableColumn fx:id="bookQuantity" prefWidth="98.0" text="Quantity" />
+           </columns></TableView>
    </children>
 </AnchorPane>
